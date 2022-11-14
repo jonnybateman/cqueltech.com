@@ -2,4 +2,4 @@
 
 Jonathan Bateman
 
-[SQLiteDevStudio][SQLiteDevStudio.md]
+[SQLiteDevStudio](SQLiteDevStudio.md)
