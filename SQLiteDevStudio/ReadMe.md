@@ -1,0 +1,1 @@
+SQLiteDevStudio ReadMe file
