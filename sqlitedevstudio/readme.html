@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CQUELTECH - SQLiteDevStudio ReadMe</title>
+        <style>
+            .header-row {
+                overflow: hidden;
+                background-color: #cacacc;
+                padding: 20px 10px;
+                border-radius: 20px;
+            }
+            .header-row-links {
+                float: right;
+                margin-top: 50px;
+            }
+            .header-row img.logo {
+                width: 200px;
+                height: 150px;
+                border-radius: 20px;
+            }
+            .header-row a {
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 12px;
+                font-size: 18px;
+                line-height: 25px;
+                border-radius: 4px;
+                text-decoration: none;
+            }
+            .header-row a.active {
+                background-color: dodgerblue;
+                color: white;
+            }
+            .header-row a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            body {
+                background-color: rgb(250, 250, 252);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .body-app-title {
+                overflow: hidden;
+                margin: 20px 0 50px 55px;
+            }
+            .body-app-title img.logo {
+                float: left;
+                width: 100px;
+                height: 100px;
+                margin-right: 55px;
+            }
+            .body-app-title a.download {
+                float: right;
+                margin-top: 0;
+            }
+            h1 {
+                color:rgb(55, 98, 200);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 30px;
+            }
+            h2 {
+                color:rgb(55, 98, 200);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                margin-left: 10px;
+            }
+            .body-app-title h1.page-title {
+                float: left;
+            }
+            p {
+                margin-left: 10px;
+                margin-right: 10px;
+                font-size: 20px;
+                color: black;
+            }
+            ul {
+                font-size: 20px;
+            }
+            .indent-block {
+                margin-left: 30px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="header-row">
+            <img class="logo" src="/cqueltech-low-resolution-color-logo.png" alt="CQUELTECH Logo">
+            <div class="header-row-links">
+                <a class="active" href="#home">Home</a>
+                <a href="http://cqueltech.com/sqlitedevstudio/privacypolicy.html">Privacy Policy</a>
+                <a href="http://cqueltech.com/sqlitedevstudio/termsofservice.html">Terms of Service</a>
+            </div>
+        </div>
+        <div class="body-app-title">
+            <img class="logo" src="/logo_actionbar_120px.png" alt="SQLiteDevStudio Logo">
+            <h1 class="page-title">SQLiteDevStudio ReadMe</h1>
+            <a class="download" href="https://play.google.com/store/apps/details?id=com.cqueltech.sqlitedevstudio&gl=GB">Download from Google Play Store</a>
+        </div>
+        <h2>
+            Overview
+        </h2>
+        <p>
+            SQLiteDevStudio is a front end SQLite Database development and maintenance tool for 
+            Android. It has been primarily developed for developers to create databases specific 
+            to their own application needs which can then be exported into their own projects.
+        </p>
+        <p>
+            It can also be used to simply view and edit data. This is particuarly useful when 
+            wishing to see the current state of data during the testing phase of application development.
+        </p>
+        <p>
+            For a limited time the app can be trialled as the full premium version. Even when the trial 
+            period ends you can continue to use the app with premium services. Re-installing 
+            SQLiteDevStudio after the trial period will result in the loss of premium services. A one 
+            time in-app purchase can be made to restore the premium functionality.
+        </p>
+        <p>
+            SQLiteDevStudio can access databases from a number of locations on a given device:
+        </p>
+        <ul>
+            <li>SQLiteDevStudio Internal Storage: Databases can be created and modified within 
+                SQLiteDevStudio's internal storage. Once complete can be exported to another 
+                project in the form of a database adapter .java file.</li>
+            <li>External Shared Storage: A database that is located in a device's shared storage 
+                can be imported into SQLiteDevStudio's internal storage where it can be viewed and edited. 
+                To push any changes made to the external version a database restore will need to be done.</li>
+            <li>Access via Content Provider: Another option when you are developing your own app is to 
+                include a content provider to allow SQLiteDevStudio to access the database(s) within your 
+                app's internal storage. The required content provider can be found 
+                <a href="https://github.com/jonnybateman/SQLiteContentProvider.git">here</a> (GitHub repository) 
+                along with instructions on how to apply it. Since a content provider could allow apps other than 
+                SQLiteDevStudio to access your database a level of security has been added to the provider. 
+                Only database requests submitted to the content provider with the correct provider access 
+                code will be granted. On completion of your project and prior to release the content provider 
+                should be removed or the associated 'exported' variable in the manifest file set to false.</li>
+            <li>Third-Party App Internal Storage: To access databases of third-party apps the device needs 
+                to be rooted. If this is the case then the databases can be accessed, viewed, and modified 
+                directly. SQLiteDevStudio has a built in file explorer for navigating to the required database.</li>
+        </ul>
+        <p>
+            SQLiteDevStudio can also be installed on an Emulator (with Google Play) in your own development 
+            environment. This is useful during development and testing of your own applications.
+        </p>
+        <p>
+            After install a user account needs to be set up to access the application. User will be prompted 
+            for an email address. This is used only in the event that the user has forgotten their password. 
+            Password will be sent to the email address that was used during account setup. Email address is 
+            encrypted and only stored locally on the device. It is not shared amongst any other parties.
+        </p>
+        <h2>
+            Functionality
+        </h2>
+        <p>
+            SQLiteDevStudio has the following functionality:
+        </p>
+        <ul>
+            <li>Create/Delete database</li>
+            <li>Open existing databases</li>
+            <li>Save/Restore database to external storage</li>
+            <li>Export database (exported as a database adapter .java file for applying to your own projects, 
+                note: data not exported)</li>
+            <li>Write and execute your own SQL statements with the built in editor</li>
+            <li>SQL keywords/data types/functions/etc are highlighted within the editor</li>
+            <li>Previously executed statements for the current session can be re-called through the SQL 
+                History dialog</li>
+            <li>Database transaction functionlity (begin transaction; commit; rollback)</li>
+            <li>View, update, delete, and insert data via a dialog interface</li>
+            <li>View exiting foreign keys</li>
+            <li>Enable/disable foreign key constraints</li>
+            <li>Limit number of rows returned</li>
+            <li>Sort the rows returned</li>
+            <li>Describe table/view</li>
+            <li>Create, alter, and drop tables</li>
+            <li>Create and drop triggers</li>
+            <li>Create and drop indexes</li>
+            <li>Extract the SQL for database objects and display code in the editor</li>
+            <li>Import table data in the form of a CSV file</li>
+            <li>Export table data to a CSV file</li>
+        </ul>
+        <p>
+            Some functionality may not be available on older devices (see Terms of Service). All functions 
+            should be available on Android 10(Q) and onwards.
+        </p>
+        <h2>Import/Export of .csv Files</h2>
+        <p>To import a .csv file into a SQLite database table using SQLiteDevStudio the format of the 
+            .csv must be as follows:
+        </p>
+        <div class="indent-block">
+            <p>
+                <em>column1_name,column2_name,column3_name,...,columnN-1_name,columnN_name<br>
+                    column1_value,column2_value,column3_value,...,columnN-1_value,ColumnN_value<br>
+                    column1_value,,column3_value,...,columnN-1_value,columnN_value<br>
+                       ...</em>
+            </p>
+        </div>
+    </body>
+</html>
