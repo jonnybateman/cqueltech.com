@@ -58,28 +58,59 @@ h2 {
   margin: 5% 3% 5% 0;
 }
 
-#div-title {
+.div-title {
   margin-top: 20px;
   margin-bottom: 50px;
   padding-bottom: 50px;
 }
 
-#div-img-phone {
+.div-img-phone {
   text-align: center;
 }
 
-#img-sqlitedevstudio-logo {
+.div-title-buttons {
+  text-align: left;
+}
+
+.h1-title {
+  text-align: left;
+}
+
+.img-sqlitedevstudio-logo {
   width: 80px;
 }
 
-#img-phone {
+.img-phone {
   padding: 0 10px;
   transform: rotate(25deg);
   width: 60%;
 }
 
+.p-title {
+  padding-top: 50px;
+}
+
 #title {
   background-color: rgb(181, 178, 178);
+}
+
+@media (max-width: 1000px) { /* when width of screen drops below 1000px do the following */
+  .img-phone {
+    position: static;
+    transform: rotate(0);
+  }
+
+  .div-title-buttons {
+    text-align: center;
+  }
+
+  .h1-title {
+    text-align: center;
+  }
+
+  .p-title {
+    text-align: center;
+  }
 }
 
 /* Content */
